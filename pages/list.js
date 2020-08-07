@@ -1,5 +1,4 @@
 import Head from 'next/head'
-import styles from '../styles/Home.module.css'
 import { Row, Col, List, Breadcrumb } from 'antd'
 import { CalendarFilled, FolderFilled, FireFilled } from '@ant-design/icons';
 import Header from '../components/Header'
@@ -20,11 +19,11 @@ const myList = () => {
   return (
   <>
     <Head>
-      <title>Home</title>
+      <title>博客列表页</title>
     </Head>
     <Header />
-    <Row className={styles['comm-main']} type="flex" justify="center">
-      <Col className={styles['comm-left']} xs={24} sm={24} md={16} lg={18} xl={14}  >
+    <Row className='comm-main' type="flex" justify="center">
+      <Col className='comm-left' xs={24} sm={24} md={16} lg={18} xl={14}  >
         <div className="bread-div">
           <Breadcrumb>
             <Breadcrumb.Item><a href="/">首页</a></Breadcrumb.Item>
@@ -38,8 +37,8 @@ const myList = () => {
             dataSource={mylist}
             renderItem={item => (
               <List.Item>
-                <div className={styles['list-title']}>{item.title}</div>
-                <div className={styles['list-icon']}>
+                <div className='list-title'>{item.title}</div>
+                <div className='list-icon'>
                   <span>
                     <CalendarFilled /> 2019-06-28
                   </span>
@@ -50,14 +49,14 @@ const myList = () => {
                     <FireFilled /> 5498人
                   </span>
                 </div>
-                <div className={styles['list-context']}>{item.context}</div>
+                <div className='list-context'>{item.context}</div>
               </List.Item>
             )}
           />
         </div>
       </Col>
 
-      <Col className={styles['comm-right']} xs={0} sm={0} md={7} lg={5} xl={4}>
+      <Col className='comm-right' xs={0} sm={0} md={7} lg={5} xl={4}>
         <Author />
         <Advert />
       </Col>

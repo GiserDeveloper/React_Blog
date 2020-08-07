@@ -1,13 +1,11 @@
-
 import {Avatar,Divider} from 'antd'
 import AuthorCSS from '../styles/components/author.css'
-import styles from '../styles/Home.module.css'
 import { GithubFilled, QqOutlined, WechatFilled } from '@ant-design/icons';
 
 const Author =()=>{
 
     return (
-        <div className={AuthorCSS["author-div"] +" " + styles["comm-box"]}>
+        <div className={AuthorCSS["author-div"] +" " + "comm-box"}>
             <div> <Avatar size={100} src="/static/author.jpg" alt="author"  /></div>
             <div className={AuthorCSS['author-introduction']}>
                 光头程序员，专注于WEB和移动前端开发。要录1000集免费前端视频的傻X。此地维权无门，此时无能为力，此心随波逐流。
